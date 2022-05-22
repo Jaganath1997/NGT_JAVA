@@ -10,10 +10,17 @@ public class JavascriptExecutorExample {
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.chrome.driver", "\\C:\\Users\\jaganag\\eclipse-workspace\\jarfiles\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
+		
 		driver.get("https://www.google.com");
 		driver.manage().window().maximize();
+		
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("alert('welcome to capgemini')");
+		System.out.println("alertcreated");
+		driver.switchTo().alert().accept();
+		System.out.println("executed successfully");
+		
+		driver.close();
 	}
 
 }
