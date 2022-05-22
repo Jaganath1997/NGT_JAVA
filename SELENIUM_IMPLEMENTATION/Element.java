@@ -24,7 +24,7 @@ public class Element {
 		//findelements
 		driver.navigate().to("https://trytestingthis.netlify.app/");
 		
-		
+		driver.close();
 		
 	}
 
